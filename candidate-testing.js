@@ -39,24 +39,24 @@ function gradeQuiz(candidateAnswers) {
     console.log(`Correct answer: ${correctAnswers[i]}`, '\n');
   }
 
-  let candidateScore = 0;
+  let grade = 0;
   let numCorrect = 0;
   let status = "FAILED";
   for (let i = 0; i < correctAnswers.length; i++) {
     if (correctAnswers[i].toUpperCase() === candidateAnswers[i].toUpperCase()) {
-      candidateScore = candidateScore + 20;
+      grade = grade + 20;
       numCorrect++;
     }
   }
-  if (candidateScore >= 80) {
+  if (grade >= 80) {
     status = "PASSED";
   }
 
-  console.log(`>>> Overall Grade: ${candidateScore}% \(${numCorrect} of 5 responses correct\) <<<`);
+  console.log(`>>> Overall Grade: ${grade}% \(${numCorrect} of 5 responses correct\) <<<`);
   console.log(`>>> Status: ${status} <<<`);
 
 
-  let grade;
+
   
 
   return grade;
